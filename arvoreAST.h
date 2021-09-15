@@ -17,6 +17,7 @@ typedef struct no{
 typedef struct varInt{
     char* id;
     char* valor;
+    char* tipoVariavel;
     struct varInt *next;
 }varInt;
 

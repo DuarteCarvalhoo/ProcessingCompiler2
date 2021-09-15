@@ -24,7 +24,9 @@ elementos_tabela *inserir_decls(char *id, char *tipo, char *parametro, int linha
 }
 
 elementos_tabela *inserir_vardecl(char* id, char* tipo, char* parametro, elementos_tabela** tabela, int linha, int coluna){
+    printf("entrei na inserir vardecl\n");
     elementos_tabela *novo_elemento = (elementos_tabela*) malloc(sizeof(elementos_tabela));
+    printf("metade inserir vardecl\n");
     novo_elemento->tipo_decl = variavel;
     novo_elemento->id = (char*)malloc(((strlen(id))+1)*sizeof(char));
     strcpy(novo_elemento->id, id);
@@ -34,7 +36,7 @@ elementos_tabela *inserir_vardecl(char* id, char* tipo, char* parametro, element
     novo_elemento->coluna = (int) malloc(sizeof(int));
     novo_elemento->coluna = coluna;
     novo_elemento->repetido = 0;
-
+    
     novo_elemento->vardecl = (vardecl*) malloc(sizeof(vardecl));
     novo_elemento->vardecl->tipo = (char*) malloc((strlen(tipo)+1)*sizeof(char));
     strcpy(novo_elemento->vardecl->tipo, tipo);
